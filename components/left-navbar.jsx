@@ -38,14 +38,7 @@ const LeftNavbar = ({ setResponse }) => {
     setIsLoading(true);
     try {
       const response = await fetch(
-        `https://v2.namsor.com/NamSorAPIv2/api2/json/origin/${values.firstName}/${values.lastName}`,
-        {
-          method: "GET",
-          headers: {
-            "X-API-KEY": "11a30ccdcb68b71e11f65cca45173cec",
-            Accept: "application/json",
-          },
-        }
+        `https://genderapi.io/api/?name=${values.firstName}&key=662a6c7177089d1bc607be63`,
       );
 
       if (response.ok) {

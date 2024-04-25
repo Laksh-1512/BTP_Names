@@ -6,13 +6,13 @@ const RightNavbar = ({ response }) => {
       {response ? (
         <>
           <p>
-            Full Name : {response.firstName} {response.lastName}
+           Name : {response.name} 
           </p>
-          <p>Country of Origin : {response.countryOrigin}</p>
-          <p>Alt country of origin : {response.countryOriginAlt}</p>
+          <p>Gender: {response.gender}</p>
+          <p>Country of Origin : {response.country}</p>
           <p>
             Accuracy score :{" "}
-            {response.probabilityAltCalibrated.toFixed(3) * 100}
+            {response.probability}
           </p>
         </>
       ) : (
